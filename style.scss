@@ -1,0 +1,2118 @@
+/*--------rest html-------*/
+
+* {
+    padding: 0;
+    margin: 0 auto;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/*---------end of the rest-------*/
+
+body {
+    font-family: 'Imprima', sans-serif;
+    font-size: 14px;
+    line-height: 1.5rem;
+    text-align: center;
+}
+
+.pagewidth {
+    width: 92%;
+}
+
+
+/* ------header------ */
+#nav-main {
+    background-color: #6BC24C;
+    border-color: #6BC24C;
+    color: white;
+    text-align: center;
+    min-height: 45px;
+    margin-bottom: 25px;
+}
+
+#navcontainer {
+    width: 92%;
+    margin: 0 auto;
+    padding: auto 15px;
+    position: relative;
+}
+
+/* telephone */
+#navcontainer #telephone {
+    text-align: right;
+}
+
+#navcontainer #telephone a {
+    color: white;
+}
+
+
+/* petit panier de cours */
+
+.mescours {
+
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    padding: 8px;
+    display: block;
+    font-size: 18px;
+    background-color: #FF6600;
+    color: white;
+    cursor: pointer;
+    z-index: 100;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    position: absolute;
+    right: 0;
+    left: auto;
+    bottom: 5px;
+}
+
+.textcours {
+    display: none;
+}
+
+.iconcours {    
+    font-size: 30px;
+ margin-top: 10px;
+    vertical-align: middle;
+    display: inline-block;
+    /* le display inline-block a centrer le <i>(element inline) verticalement */
+}
+
+/* logo bio */
+
+#logo-bio {
+    font-size: 35px;
+    width: 60%;
+    /* pourcentage de height ne marche pas, si je marque la hauteur */
+    margin: 5px 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* background-color: red; */
+}
+
+#logo-bio .nav-logo img{
+    max-width: 80%;
+}
+
+
+
+/* bar de recherche */
+
+
+.searchbar {
+    background: #6BC24C;
+    height: 35px;
+    width: 90%;
+    margin-bottom: 10px;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.searchbar input {
+    border: 2px solid #6BC24C;
+    border-radius: 5px;
+    background: white;
+    color: grey;
+    height: 100%;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.searchbar button {
+    top: 0;
+    right: 0;
+    background: #6BC24C;
+    border-radius: 0 5px 5px 0;
+    border-color: transparent;
+    cursor: pointer;
+}
+
+.searchbar button {
+    font-size: 25px;
+    color: white;
+    margin-left: 20px;
+}
+
+#burger {
+    font-size: 40px;
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    cursor: pointer;
+}
+
+#navbar {
+    display: none;
+}
+
+.ulnavbar {
+    line-height: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.ulnavbar li a {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* ----------------main------------- */
+
+.letitre {
+    width: 80%;
+    margin-bottom: 30px;
+}
+
+.letitre img {
+    width: 20px;
+    height: auto;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.letitre h1 {
+    display: inline-block;
+    color: #ff6600;
+    font-size: 1rem;
+}
+
+
+#details {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* #details section {
+    /* margin: 50px;
+} */
+
+#details h2 {
+    width: 100%;
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
+    color: grey;
+    margin: 50px 30px;
+    line-height: 2.5rem;
+}
+
+#details h5 {
+    font-weight: normal;
+    font-size: 1.2rem;
+    margin: 6px;
+    color: #6bc24c;
+    font-style: italic;
+    text-align: justify;
+}
+
+#details h4 {
+    color: grey;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.3rem;
+    margin: 20px;
+}
+
+#details h4 i {
+    color: #6bc24c;
+}
+
+/* slider------------------ */
+
+#slider .banner-wrapper input{
+    display: none;
+}
+
+.banner {
+	border: 4px solid white;
+	width: 80vw;
+	height: 40vw;
+	box-sizing: border-box;
+}
+
+.banner .banner-wrapper {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+@keyframes banner-swipe {
+	0% { left: 0; }
+	33.33% { left: -80vw; }
+	66.66% { left: -160vw; }
+	100% { left: -240vw; }
+}
+
+.banner-list {
+	width: 320vw;
+	height: 40vw;
+	position: absolute;
+	left: 0;
+	top: 0;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	list-style: none;
+	animation: banner-swipe 16s ease  1s infinite;
+	-webkit-animation: banner-swipe 16s ease  1s infinite;
+}
+
+
+.banner-list .item img{
+	width: 80vw;
+	height: auto;
+}
+
+
+
+/* ----les produits---- */
+.nosproduits {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+    max-height: 700px;
+}
+
+.particles {
+    width: 220px;
+    height: auto;
+    margin: 8px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    position: relative;
+}
+
+.particles img {
+    height: 100%;
+    max-height: 220px;
+}
+
+
+.particles i {
+    font-size: 30px;
+    color: #FF6600;
+    margin-top: 5px;
+    position: absolute;
+    right: 0%;
+    bottom: 0%;
+}
+
+/* ---les recettes--- */
+.recette {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+    max-height: 980px;
+}
+
+.recette article {
+    width: 360px;
+    height: auto;
+    margin: 10px 50px;
+    overflow: hidden;
+}
+
+
+.recette article img { 
+    height: 100%;
+    max-height: 360px;
+}
+
+
+.bordure {
+    width: 50%;
+    height: 15px;
+    font-size: 30px;
+    margin: 50px auto;
+    color: #6bc24c;
+}
+
+ .nosrecettes input[type=email] {
+    padding: 8px;
+    text-transform: uppercase;
+    border: 1px solid #6bc24c;
+    border-radius: 10px;
+    color: #296019;
+    background-color: #ffffff;
+    width: 60%;
+    margin-bottom: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.nosrecettes span {
+    color: #6bc24c;
+    font-size: 1.6rem;
+}
+
+.nosrecettes input[type=submit] {
+    background-color: white;
+    padding: 8px;
+    border: 1px solid #6bc24c;
+    color: #296019;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.nosrecettes input[type=submit]:hover {
+    background-color: #6bc24c;
+    color: white;
+    border: 1px solid white;
+}
+
+/* ---conseil--- */
+
+.conseils {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.conseils article {
+    width: 90%;
+    height: auto;
+    margin: 0 20%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.conseils .textconseil {
+    max-width: 400px;
+    height: 400px;
+    box-sizing: border-box;
+    background-color: #296019;
+    color: white;
+    text-align: center;
+    padding: 80px;
+    margin: 0;
+}
+
+.conseils .textconseil p{
+    max-height: 150px;
+    overflow:hidden;
+}
+
+.conseils .textconseil a {
+    color: white;
+    text-align: left;
+}
+
+.conseils article img {
+    display: block;
+    /* le display:block a permet de enlever le petit pied de image (initialement considérer comme inline-block) */
+    width: 100%;
+    max-width: 400px;
+    height: 400px;
+    padding: 0;
+    margin: 0;
+    object-fit:cover;
+}
+
+
+/* ------------------footer------------------ */
+
+#footer-main {
+    text-align: center;
+}
+
+/* footer réseaux sociaux */
+
+
+#footer-reseaux {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.jesuisuneligne {
+    width: 90%;
+    height: 0.1px;
+    border: 0.5px solid lightgray;
+    margin: 5px 20px;
+}
+
+#footer-reseaux h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
+    color: #296019;
+    margin: 30px;
+}
+
+#footer-reseaux h4 {
+    font-size: 1.2rem;
+    color: grey;
+}
+
+.footer-reseaux-icons {
+    display: flex;
+    font-size: 40px;
+}
+
+.footer-reseaux-icons li {
+    margin: 20px 30px;
+}
+
+.footer-reseaux-icons a {
+    color: #ff6600;
+
+}
+
+.footer-reseaux-img {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 10px 30px 10px;
+    flex-wrap: wrap;
+    overflow: hidden;
+    max-height: 260px;
+}
+
+/* .footer-reseaux-img a{
+    width: 250px; 
+} */
+
+.footer-reseaux-img img {
+    width: 250px;
+    height: auto;
+    border: 1px solid white;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+/* footer les infos */
+
+#footer-buttom-backcolor {
+    background-color: #6bc24c;
+    color: white;
+}
+
+#footer-bottom {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+}
+
+#footer-bottom a {
+    color: white;
+}
+
+#footer-bottom .column {
+    width: 80%;
+    padding: 15px 10px;
+}
+#footer-bottom .column ul{
+    text-align: left;
+}
+
+#footer-bottom .column:nth-child(3) {
+    text-align: center;
+}
+
+#footer-bottom .column:nth-child(2) {
+    display: none;
+}
+
+
+#footer-bottom h3 {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    margin: 15px 20px;
+}
+
+#footer-bottom .column ul h3{
+    text-align: left;
+    margin-left: 0;
+}
+
+#footer-bottom img,
+#footer-bottom p {
+    margin-bottom: 10px;
+}
+
+#footer-bottom .column input[type=email] {
+    padding: 8px;
+    text-transform: uppercase;
+    border: 1px solid #6bc24c;
+    border-radius: 10px;
+    color: #296019;
+    background-color: #ffffff;
+    width: 60%;
+    margin-bottom: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+#footer-bottom .column input[type=submit] {
+    background-color: white;
+    padding: 8px;
+    border: 1px solid #6bc24c;
+    color: #296019;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+#footer-bottom .column input[type=submit]:hover {
+    background-color: #6bc24c;
+    color: white;
+    border: 1px solid white;
+}
+
+#footer-bottom .column ul li a i {
+    margin: auto 10px;
+}
+
+#footer-bottom .column:first-child {
+    display: flex;
+    justify-content: space-around;
+}
+
+#footer-bottom .colum:first-child ul {
+    width: 45%;
+}
+
+/* copyright */
+
+#copyright {
+    padding: 0 10px 10px 10px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+#copyright a {
+    color: white;
+}
+
+/* ----------------------------------story--------------------- */
+
+
+#story h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+    margin: 50px;
+    color: #6bc24c;
+    font-weight: normal;
+    line-height: 3rem;
+}
+
+.engagements {
+    display: flex;
+    width: 60%;
+}
+
+.engagements h3 {
+    margin-right: 20px;
+    color: #296019;
+    ;
+}
+
+.engagements p {
+    line-height: 1rem;
+    color: #296019;
+}
+
+.engagements i {
+    font-size: 30px;
+    color: #296019;
+}
+
+.lestory {
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-bottom: 50px;
+}
+
+.lestory h2 {
+    margin: 30px;
+    color: grey;
+    font-size: 1.6rem;
+}
+
+.lestory h2 img {
+    width: 30px;
+    margin-left: 20px;
+}
+
+.lestory p {
+    max-width: 70%;
+    text-align: justify;
+}
+
+.lestory ul {
+    max-width: 60%;
+    list-style-type: disc;
+    text-decoration: inside;
+    text-align: left;
+}
+
+.lestory .ourphoto {
+    width: 50%;
+    margin: 30px;
+    box-sizing: border-box;
+    border: 2px solide white;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+/* ---------------------blog------------------------ */
+
+
+
+
+#headerblog
+{
+width: 100%;
+}
+#headerblog h1
+{
+    width: 100%;
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+    margin: 50px auto;
+    color: #6bc24c;
+    font-weight: normal;
+    line-height: 3rem;
+}
+
+
+#blog #headerblog #nav-categories,
+#blog #headerblog #nav-categories ul
+{
+    display: flex;  
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+#blog #headerblog #nav-categories ul li
+{
+    margin: 20px 5px 25px;
+}
+#blog #headerblog #nav-categories ul li a
+{
+    color:white;
+    background-color: grey;
+    padding: 3px 15px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+#blog #headerblog #nav-categories ul li a.active{
+    background-color: #6bc24c;
+}
+
+#blog #headerblog #nav-categories input{
+    height: 50%;
+    width: 60%;
+    padding: 8px;
+    text-transform: uppercase;
+    border: 1px solid #6bc24c;
+    border-radius: 10px;
+    color: #296019;
+    background-color: #ffffff;
+    margin-bottom: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+#blog{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#blog .postblog{
+width: 80%;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+align-items: flex-start;
+margin-bottom: 10px;
+}
+
+#blog .postblog p{
+    width: 100%;
+    display: none;
+}
+#blog .postblog img{
+    width: 100%;
+    border: 0.5px solid white;
+    border-radius: 10px;
+    /*align-self:flex-start;
+    faitlemêmeeffetde"align-items"enhaut*/
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+#blog .postblog .textblog{
+width:100%;
+}
+
+#blog .postblog .textblog h2{
+    font-size:1.1rem;
+    margin: 5px;
+    }
+
+#blog .postblog .textblog p{
+    font-size:0.7rem;
+    }
+
+#blog .postblog .textblog a{
+    display: inline-block;
+    color:#ffffff;
+    background-color: #6bc24c;
+    border-radius: 3px;
+    padding: 2px 10px;
+    }
+
+
+
+
+#blog #footerblog
+{
+    width: 100%;
+    text-align:center;
+    color: #296019;
+    margin-bottom: 15px;
+}
+
+.activ-blue{
+    color:grey;
+    font-weight:bold;
+}
+/* -------------------blog page-------------- */
+
+
+#leblogtitle h1{
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+    margin: 50px;
+    color: #6bc24c;
+    font-weight: normal;
+    line-height: 3rem;
+}
+
+.leblog {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    box-sizing: border-box;
+    padding: 20px;
+    margin-bottom: 50px;
+    border: 1px solid #6bc24c;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+
+.leblog h2 {
+    margin: 50px;
+    color: #ff6600;
+    font-size: 1.6rem;
+    font-family: 'Dancing Script', cursive;
+}
+
+
+.leblog p {
+    margin-top: 30px;
+    max-width: 70%;
+    text-align: justify;
+    font-size: 1.1rem;
+}
+
+.leblog i{
+    font-size: 30px;
+    color: #6bc24c;
+    margin: 50px;
+}
+
+.leblog .blogphoto {
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px solide white;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+
+/* ---------------------recette page------------------ */
+
+#larecettetitle h1{
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+    color: #ff6600;
+    font-weight: normal;
+    line-height: 3rem;
+    margin:50px;
+}
+.larecette{
+    margin-bottom: 50px;
+}
+.larecette .prepa{
+    display: flex;
+    color: gray;
+    width: 80%;
+    margin-bottom: 30px;
+}
+
+.larecette span{
+    font-size: 1.2rem;
+    color: #ff6600;
+    font-weight: bold;
+}
+
+.larecette img{
+    width: 80%;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+.larecette h2{
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
+    margin: 50px 20px 20px;
+    color: #ff6600;
+    line-height: 3rem;
+}
+
+.larecette p{
+    margin: 20px;
+}
+
+.larecette li{
+    max-width: 300px;
+    text-align: left;
+}
+
+.larecette p{
+    width: 80%;
+    text-align: left;
+}
+.larecette a{
+    color: #6bc24c;
+    font-size: 26px;
+}
+/* -------------------Produit-------------------------*/
+
+#produit h1{
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+    margin: 10px;
+    color: #6bc24c;
+    font-weight: normal;
+    line-height: 3rem;
+}
+
+#produit .box{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}  
+
+
+.postproduit {
+    width: 220px;
+    height: auto;
+    margin: 8px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+#produit img {
+    height: 100%;
+    max-height: 220px;
+    margin-bottom: 20px;
+    border-radius: 10%;
+    -webkit-border-radius: 10%;
+    -moz-border-radius: 10%;
+    -ms-border-radius: 10%;
+    -o-border-radius: 10%;
+}
+
+.postproduit h3 {
+    font-family: 'Dancing Script', cursive;
+    color: #6bc24c;
+    margin-top: 5px;
+    position: absolute;
+   left: 30%;
+    bottom: 0%;
+    cursor:pointer;
+}
+
+.postproduit i {
+    font-size: 30px;
+    color: #FF6600;
+    margin-top: 5px;
+    position: absolute;
+    right: 0%;
+    bottom: 2%;
+    cursor:pointer;
+}
+
+
+
+/* ---------------------contact----------------------- */
+
+
+#contact{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    box-sizing: border-box;
+    line-height: 35px;
+    /* padding-bottom: 50px;ne marche pas?? */
+}
+
+#contact h1{
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+    margin: 50px;
+    color: #6bc24c;
+    font-weight: normal;
+    line-height: 3rem;
+}
+
+#contact .horaire h2{
+    margin: auto;
+}
+
+
+#contact form{
+    width: 90%;
+}
+
+#contact fieldset{
+    width: 100%;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 1px solid grey;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+}
+
+#contact p{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+#contact input{
+    width: 60%;
+}
+
+/*-------------------la case adresse-----------*/
+#addressContainer{
+    position: relative;
+}
+
+#addressBox{
+    width: 60%;
+    position: absolute;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.1);
+    border-top: none;
+    z-index: 99;
+    bottom: calc(100% + 2px);
+    right: 0;
+    background-color: white;
+    text-align: left;
+
+  }
+
+  #addressBox li{
+      list-style:none;
+      cursor: pointer;
+      padding-left: 10px;
+  }
+
+  #addressBox li:hover{
+      background-color: rgba(0, 0, 0, 0.1);
+  }
+
+
+#contact .button-form{
+    text-align: center;
+    display: flex;
+}
+
+#contact .button-form input{
+    color:white;
+    border:0.5px solid gray;
+    margin: 0 20px;
+    padding: 8px 15px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    background-color:#6bc24c;
+}
+
+#contact fieldset textarea
+{
+    width: 60%;
+    height: 50px;
+}
+
+#contact fieldset input[type=text],
+#contact fieldset input[type=email],
+#contact fieldset input[type=telephone],
+#contact fieldset textarea,
+#contact fieldset select
+{
+    padding: 3px 5px;
+    font-size:0.9rem;
+    border:0.5px solid #f4ece6;
+}
+
+#contact fieldset textarea:focus,
+#contact fieldset select:focus,
+#contact fieldset input:focus{
+    background-color: lightgray;
+}
+
+
+#map{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+#map h2{
+    width: 100%;
+}
+
+#map .coordonn{
+    width: 100%;
+    font-size: 1.2rem;
+    margin: 20px 10px 10px 50px;
+    color: grey;
+}
+#map .carte{
+    box-sizing: border-box;
+    margin-bottom: 50px;
+}
+
+
+
+
+/* ----------------------mentions-------------------------- */
+
+
+#mentions {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 50px;
+}
+
+#mentions h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+    margin: 50px;
+    color: #6bc24c;
+    font-weight: normal;
+    line-height: 3rem;
+}
+
+#mentions p {
+    max-width: 80%;
+    text-align: justify;
+}
+
+
+
+/* -------------------------very little screen */
+
+@media screen and (max-width:460px){
+
+    /* tres petit écrant le bar de recherche  */
+    .searchbar input {
+width: 60%;
+    }
+    .searchbar button {
+        margin-left: 2px;
+ width: 20%;
+    }
+/* recette largeur sur hauteur */
+
+.recette {
+    max-height: 990px;
+}
+
+.nosrecettes{
+margin: 5px;
+}
+
+.conseils article {
+    width: 100%;}
+
+/* -----------------------story */
+
+.lestory {
+    width: 100%;
+    border: none;
+}
+
+.lestory p {
+    max-width: 90%;
+}
+
+.lestory ul{
+    width: 80%;
+}
+#story .engagements {
+    margin: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+}
+#story .engagements h3{
+    width: 100%;
+    margin-bottom: 10px;
+}
+.lestory .ourphoto {
+    width: 80%;}
+
+}
+
+
+
+/* -@media 1 ------------middle scree------------- */
+@media screen and (min-width: 768px) and (max-width:992px) {
+
+    /* -----------------header-------------- */
+    /* navbar */
+    #burger {
+        display: none;
+    }
+
+    #navbar {
+        padding: 15px;
+        display: flex;
+    }
+
+    .ulnavbar {
+        flex-direction: row;
+        line-height: 1rem;
+        justify-content: space-between;
+        width: 70%;
+        margin-left: 5%;
+    }
+
+    /* -----------------Main----------------- */
+
+    /* ---les recette---- */
+
+    #details section {
+        margin: 20px;
+    }
+
+    .recette {
+        max-height: 850px;
+    }
+
+    .recette article {
+        width: 300px;
+        height: auto;
+        margin: 10px 20px;
+        overflow: hidden;
+    }
+
+    .recette article img {
+        height: 100%;
+        max-height: 300px;
+    }
+
+    /* ------------------footer------------------ */
+
+    .footer-reseaux-img {
+        max-height: 250px;
+    }
+
+    .footer-reseaux-img img {
+        width: 225px;
+    }
+
+    #footer-bottom {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #footer-bottom .column {
+        width: 30%;
+    }
+
+    #footer-bottom .column:nth-child(1) {
+        width: 35%;
+    }
+
+    #footer-bottom .column:nth-child(2) {
+        display: block;
+    }
+
+    #footer-bottom .column img {
+        display: block;
+        width: 60%;
+        margin: 0 auto;
+    }
+
+/* -----------------------story */
+
+.lestory {
+    width: 80%;
+}
+
+.lestory p {
+    max-width: 70%;
+}
+
+/* -----------------blog----------------- */
+
+#blog .postblog{
+    width: 45%;
+}
+
+/* -----------------blog page---------------- */
+.leblog .blogphoto {
+    width: 80%;
+}
+
+
+
+
+
+
+}
+
+/* -------big screen-------- */
+@media screen and (min-width: 992px) and (max-width:1200px) {
+
+    .pagewidth {
+        max-width: 1200px;
+    }
+
+    /* ------header------ */
+    #nav-main {
+        min-height: 55px
+    }
+
+
+    /* petit panier de cours */
+    .mescours {
+        font-size: 18px;
+        border-top-left-radius: 20px;
+        position: absolute;
+        left: auto;
+        right: 0;
+        bottom: -1px;
+        border-top-left-radius: 20px;
+        text-align: center;
+
+        width: auto;
+        height: auto;
+    }
+
+    .mescours span {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .textcours {
+        padding-top: 4px;
+    }
+
+    /* logo et search bar*/
+
+    #logo-bio {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin: 10px 0 20px;
+    }
+
+
+    /* navbar */
+    #burger {
+        display: none;
+    }
+
+    #navbar {
+        padding: 15px;
+        display: flex;
+    }
+
+    .ulnavbar {
+        flex-direction: row;
+        line-height: 1rem;
+        justify-content: space-between;
+        width: 70%;
+        margin-left: 5%;
+    }
+
+
+    /* -----------main---------- */
+
+        /* ----------panier de header */
+
+        .iconcours {    margin-left: 10px; }
+/* slider------------------ */
+
+
+.banner {
+	width: 50vw;
+	height: 25vw;
+}
+
+.banner .banner-wrapper {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+@keyframes banner-swipe {
+	0% { left: 0; }
+	33.33% { left: -50vw; }
+	66.66% { left: -100vw; }
+	100% { left: -150vw; }
+}
+
+.banner-list {
+	width: 200vw;
+	height: 25vw;
+	
+}
+
+
+.banner-list .item img{
+	width: 50vw;
+
+}
+
+    /* --- prosuits--- */
+
+    .nosproduits {
+        overflow: hidden;
+        max-height: 390px;
+    }
+
+    .particles {
+        width: 200px;
+        height: auto;
+        margin: 2px;
+        margin-bottom: 10px;
+        overflow: hidden;
+    }
+
+    .particles img {
+        max-height: 200px;
+    }
+
+    /* ---les recette---- */
+
+    #details section {
+        margin: 20px;
+    }
+
+    .recette {
+        max-height: 890px;
+    }
+
+    .recette article{
+        width: 320px;
+        height: auto;
+        margin: 10px 20px;
+        overflow: hidden;
+    }
+
+
+    .recette article img{
+        width: 100%;
+        max-height: 320px;
+    }
+
+    .recette article img:hover {
+        transform:scale(1.05);
+        -webkit-transform:scale(1.05);
+        -moz-transform:scale(1.05);
+        -ms-transform:scale(1.05);
+        -o-transform:scale(1.05);
+        transition: transform 1s ease;
+        -webkit-transition: transform 1s ease;
+        -moz-transition: transform 1s ease;
+        -ms-transition: transform 1s ease;
+        -o-transition: transform 1s ease;
+        box-shadow: 5px 5px 5px lightgray;
+    }
+    
+
+
+    /* --conseil-- */
+
+    .conseils article {
+        width: 80%;
+        height: auto;
+        margin: 0 20%;
+        flex-direction: row;
+    }
+
+    .conseils :nth-child(3) {
+        flex-direction: row-reverse;
+    }
+
+    .conseils article a{
+        width: 50%;
+    }
+
+    .conseils article img {
+        width: 100%;
+        max-height: 300px;
+    }
+
+    .conseils .textconseil {
+        width: 50%;
+        max-height: 300px;
+        padding: 20px 40px;
+    }
+
+
+    /* ------------footer----------- */
+
+    .footer-reseaux-img {
+        max-height: 260px;
+    }
+
+    .footer-reseaux-img img {
+        width: 240px;
+    }
+
+    #footer-bottom {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #footer-bottom .column {
+        width: 30%;
+    }
+
+    #footer-bottom .column:nth-child(1) {
+        width: 35%;
+    }
+
+    #footer-bottom .column:nth-child(2) {
+        display: block;
+    }
+
+    #footer-bottom .column img {
+        display: block;
+        width: 60%;
+        margin: 0 auto;
+    }
+
+
+    /* ---------------------------story------------------------ */
+
+    .lestory {
+        flex-direction: row;
+        width: 80%;
+        border: 1px solid grey;
+        box-sizing: border-box;
+        position: relative;
+        justify-content: space-between;
+    }
+
+
+    .lestory h2 {
+        width: 38%;
+        /* comment utiliser nthchild? ca ne marche pas */
+    }
+
+    .lestory div {
+        width: 62%;
+        padding-left: 10px;
+        /* pourquoi ne marche pas??? */
+    }
+
+    .lestory p {
+        max-width: 100%;
+    }
+
+    .lestory .ourphoto {
+        width: 28%;
+        position: absolute;
+        left: 10px;
+        bottom: 10px;
+    }
+
+    .lestory ul {
+        max-width: 80%;
+    }
+
+    /* --------------------blog---------------- */
+    #blog #headerblog #nav-categories input{
+        width: 40%;
+     }
+    
+    #blog .postblog{
+        width: 31%;
+        position: relative;
+    }
+
+
+    #blog .postblog:hover{
+        transform:scale(1.05);
+        -webkit-transform:scale(1.05);
+        -moz-transform:scale(1.05);
+        -ms-transform:scale(1.05);
+        -o-transform:scale(1.05);
+        transition: transform 1s ease;
+        -webkit-transition: transform 1s ease;
+        -moz-transition: transform 1s ease;
+        -ms-transition: transform 1s ease;
+        -o-transition: transform 1s ease;
+        box-shadow: 5px 5px 5px lightgray;
+    }
+    
+
+    #blog .postblog:hover p{
+        width: 101%;
+        height:40%;
+        background-color:rgba(255,255,255,0.8);
+        display: block;
+        color: #296019;
+        font-size: 1.2rem;
+        position: absolute;
+        font-weight: bold;
+        left: 0%;
+        top: 25%;
+        box-sizing: border-box;
+        padding: 15px 5px ;
+    }
+/* --------------blog page------------ */
+.leblog {
+    width: 80%;
+    padding: 50px;
+}
+
+.leblog .blogphoto {
+    width: 70%;
+}
+
+/* --------------recette page------------------ */
+.larecette{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.larecette .prepa{
+    width: 60%;
+    margin-left: 30px;
+}
+
+.larecette img{
+    width: 50%;
+    margin-bottom: 50px;
+}
+
+.larecette ul{
+    width: 30%;
+}
+
+.larecette div{
+    width: 90%;
+}
+
+
+    /* ---------------------contact----------------------- */
+    #contact .horaire{
+        width: 60%;
+    }
+
+
+    /* ----------------------mentions------------------------- */
+
+    #mentions p {
+        max-width: 66%;
+    }
+
+
+
+
+
+}
+
+
+/* ----------------screen > 1200px ---------------- */
+
+@media screen and (min-width: 1200px) {
+
+
+
+
+    .pagewidth {
+        max-width: 1200px;
+    }
+
+    /* ------header------ */
+    #nav-main {
+        min-height: 55px
+    }
+
+
+    /* petit panier de cours */
+    .mescours {
+        font-size: 18px;
+        border-top-left-radius: 20px;
+        position: absolute;
+        left: auto;
+        right: 0;
+        bottom: -1px;
+        border-top-left-radius: 20px;
+        text-align: center;
+
+        width: auto;
+        height: auto;
+    }
+
+    .mescours span {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .textcours {
+        padding-top: 4px;
+    }
+
+    /* logo et search bar*/
+
+    #logo-bio {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin: 10px 0 20px;
+    }
+
+
+    /* navbar */
+    #burger {
+        display: none;
+    }
+
+    #navbar {
+        padding: 15px;
+        display: flex;
+    }
+
+    .ulnavbar {
+        flex-direction: row;
+        line-height: 1rem;
+        justify-content: space-between;
+        width: 70%;
+        margin-left: 5%;
+    }
+
+
+    /* -----------main---------- */
+
+    /* ----------panier de header */
+
+    .iconcours {    margin-left: 10px; }
+
+/* slider------------------ */
+
+
+.banner {
+	width: 50vw;
+	height: 25vw;
+}
+
+.banner .banner-wrapper {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+@keyframes banner-swipe {
+	0% { left: 0; }
+	33.33% { left: -50vw; }
+	66.66% { left: -100vw; }
+	100% { left: -150vw; }
+}
+
+.banner-list {
+	width: 200vw;
+	height: 25vw;
+	
+}
+
+
+.banner-list .item img{
+	width: 50vw;
+
+}
+
+
+
+
+
+    /* --- prosuits--- */
+
+    .nosproduits {
+        overflow: hidden;
+        max-height: 380px;
+    }
+
+    .particles {
+        width: 190px;
+        height: auto;
+        margin: 2px;
+        margin-bottom: 10px;
+        overflow: hidden;
+    }
+
+    .particles img {
+        max-height: 190px;
+    }
+
+
+    /* --conseil-- */
+
+    .conseils article {
+        width: 80%;
+        height: auto;
+        margin: 0 20%;
+        flex-direction: row;
+    }
+
+    .conseils :nth-child(3) {
+        flex-direction: row-reverse;
+    }
+    .conseils .textconseil {
+        width: 50%;}
+    
+        .conseils article a{
+            width: 50%;
+        } 
+
+
+    /* ------------footer----------- */
+    .footer-reseaux-img {
+        max-height: 260px;
+    }
+
+    .footer-reseaux-img img {
+        width: 250px;
+    }
+
+    #footer-bottom {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #footer-bottom .column {
+        width: 30%;
+    }
+
+    #footer-bottom .column:nth-child(1) {
+        width: 35%;
+    }
+
+    #footer-bottom .column:nth-child(2) {
+        display: block;
+    }
+
+    #footer-bottom .column img {
+        display: block;
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    /* ---------------------------story------------------------ */
+
+    .lestory {
+        flex-direction: row;
+        width: 80%;
+        border: 1px solid grey;
+        box-sizing: border-box;
+        position: relative;
+        justify-content: space-between;
+    }
+
+    .lestory h2 {
+        width: 38%;
+        /* comment utiliser nthchild? ca ne marche pas */
+    }
+
+    .lestory div {
+        width: 62%;
+        padding-left: 10px;
+        /* pourquoi ne marche pas??? */
+    }
+
+    .lestory p {
+        max-width: 100%;
+    }
+
+    .lestory .ourphoto {
+        width: 28%;
+        position: absolute;
+        left: 10px;
+        bottom: 10px;
+    }
+
+    .lestory ul {
+        max-width: 80%;
+    }
+
+/* ---------------------------blog---------------------------- */
+
+#blog #headerblog #nav-categories input{
+    width: 30%;
+ }
+
+#blog .postblog{
+    width: 31%;
+    position: relative;
+}
+
+
+#blog .postblog:hover{
+    transform:scale(1.05);
+    -webkit-transform:scale(1.05);
+    -moz-transform:scale(1.05);
+    -ms-transform:scale(1.05);
+    -o-transform:scale(1.05);
+    transition: transform 1s ease;
+    -webkit-transition: transform 1s ease;
+    -moz-transition: transform 1s ease;
+    -ms-transition: transform 1s ease;
+    -o-transition: transform 1s ease;
+    box-shadow: 5px 5px 5px lightgray;
+}
+
+
+#blog .postblog:hover p{
+    width: 101%;
+    height:40%;
+    background-color:rgba(255,255,255,0.8);
+    display: block;
+    color: #296019;
+    font-size: 1.2rem;
+    position: absolute;
+    font-weight: bold;
+    left: 0%;
+    top: 25%;
+    box-sizing: border-box;
+    padding: 30px 5px 15px 5px;
+}
+
+/* ---------------------------blog page----------------------- */
+
+
+.leblog {
+    width: 80%;
+    padding: 50px;
+}
+
+
+.leblog .blogphoto {
+    width: 60%;
+   
+}
+
+/* ------------------------recette page--------------------- */
+.larecette{
+    display: flex;
+    flex-wrap: wrap;
+justify-content: flex-end;
+width: 80%;
+}
+
+.larecette .prepa{
+    width: 60%;
+    margin-bottom: 50px;
+    margin-left: 30px;
+}
+
+.larecette img{
+    width: 50%;
+    margin-bottom: 50px;
+}
+
+.larecette ul{
+    width: 30%;
+}
+
+.larecette div{
+    width: 90%;
+}
+    /* ---------------------contact----------------------- */
+
+    #contact .horaire{
+        width: 60%;
+    }
+
+    /* ----------------------mentions------------------------- */
+
+    #mentions p {
+        max-width: 66%;
+    }
+
+
+    /* ----------------------mentions------------------------- */
+
+    #mentions p {
+        max-width: 66%;
+    }
+
+
+
+}
+
+/* -----------------------print-------------------- */
+@media print{
+
+
+
+    /* ----------------recette page---------- */
+    header,
+    footer,
+    .larecette a{
+display: none;
+    }
+
+    #larecettetitle h1{
+        font-family: 'Imprima', sans-serif;
+        font-size: 1.8rem;
+        color: #ff6600;
+        font-weight: normal;
+        line-height: 1rem;
+        margin:20px;
+    }
+
+    .larecette{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 30px;
+        border: 1px solid black;
+        border-radius: 20px;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        -ms-border-radius: 20px;
+        -o-border-radius: 20px;
+}
+.larecette span{
+    font-size: 1rem;
+}
+
+.larecette h2{
+    font-family: 'Imprima', sans-serif;
+    font-size: 1.2rem;
+    margin:20px;
+    line-height: 1rem;
+}
+    
+    .larecette .prepa{
+        width: 80%;
+        margin-left: 30px;
+    }
+    
+    .larecette img{
+        width: 40%;
+        height: 100%;
+        margin-top: 80px;
+    }
+    
+    .larecette ul{
+        width: 50%;
+        margin-top: 10px;
+    }
+    
+    .larecette div{
+        width: 100%;
+    }
+    
+
+
+
+
+}
